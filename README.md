@@ -1,20 +1,7 @@
 
 # Parallax Background Component
 
-A reusable JavaScript component that creates a stunning 4-row scrolling parallax background with optimized Cloudinary images. Perfect for adding dynamic visual effects to any web page.
-
-## Features
-
-- **🎨 4-Row Parallax Effect**: Smooth scrolling animations with alternating directions
-- **☁️ Cloudinary Integration**: Optimized images with automatic format selection and progressive loading
-- **⚡ Performance Optimized**: 
-  - Images resized to max 500px width
-  - Progressive JPEG loading
-  - GPU acceleration with `will-change: transform`
-  - Lazy loading support
-- **📱 Responsive Design**: Works seamlessly across all device sizes
-- **🔧 Easy Integration**: Simple import and initialization
-- **🎛️ Customizable**: Configurable speeds, gaps, and image sources
+A reusable JavaScript component that creates a 4-row scrolling parallax background.
 
 ## Quick Start
 
