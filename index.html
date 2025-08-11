@@ -8,40 +8,111 @@
 </head>
 <body>
   <div class="parallax-gallery">
-    <div class="row">
-      <img src="images/1.jpg" alt="Image 1">
-      <img src="images/2.jpg" alt="Image 2">
-      <img src="images/3.jpg" alt="Image 3">
-      <img src="images/4.jpg" alt="Image 4">
-      <img src="images/5.jpg" alt="Image 5">
-      <img src="images/6.jpg" alt="Image 6">
+  <div class="row scrolling-row scroll-right" style="--scroll-speed: 30s;">
+      <div class="scrolling-inner">
+        <img src="images/1.jpg" alt="Image 1">
+        <img src="images/2.jpg" alt="Image 2">
+        <img src="images/3.jpg" alt="Image 3">
+        <img src="images/4.jpg" alt="Image 4">
+        <img src="images/5.jpg" alt="Image 5">
+        <img src="images/6.jpg" alt="Image 6">
+        <img src="images/1.jpg" alt="Image 1 clone">
+        <img src="images/2.jpg" alt="Image 2 clone">
+        <img src="images/3.jpg" alt="Image 3 clone">
+        <img src="images/4.jpg" alt="Image 4 clone">
+        <img src="images/5.jpg" alt="Image 5 clone">
+        <img src="images/6.jpg" alt="Image 6 clone">
+      </div>
     </div>
-    <div class="row">
-      <img src="images/7.jpg" alt="Image 7">
-      <img src="images/8.jpg" alt="Image 8">
-      <img src="images/9.jpg" alt="Image 9">
-      <img src="images/10.jpg" alt="Image 10">
-      <img src="images/11.jpg" alt="Image 11">
-      <img src="images/12.jpg" alt="Image 12">
+  <div class="row scrolling-row scroll-left" style="--scroll-speed: 48s;">
+      <div class="scrolling-inner">
+        <img src="images/7.jpg" alt="Image 7">
+        <img src="images/8.jpg" alt="Image 8">
+        <img src="images/9.jpg" alt="Image 9">
+        <img src="images/10.jpg" alt="Image 10">
+        <img src="images/11.jpg" alt="Image 11">
+        <img src="images/12.jpg" alt="Image 12">
+        <img src="images/7.jpg" alt="Image 7 clone">
+        <img src="images/8.jpg" alt="Image 8 clone">
+        <img src="images/9.jpg" alt="Image 9 clone">
+        <img src="images/10.jpg" alt="Image 10 clone">
+        <img src="images/11.jpg" alt="Image 11 clone">
+        <img src="images/12.jpg" alt="Image 12 clone">
+      </div>
     </div>
-    <div class="row">
-      <img src="images/13.jpg" alt="Image 13">
-      <img src="images/14.jpg" alt="Image 14">
-      <img src="images/15.jpg" alt="Image 15">
-      <img src="images/16.jpg" alt="Image 16">
-      <img src="images/17.jpg" alt="Image 17">
-      <img src="images/18.jpg" alt="Image 18">
+  <div class="row scrolling-row scroll-right" style="--scroll-speed: 25s;">
+      <div class="scrolling-inner">
+        <img src="images/13.jpg" alt="Image 13">
+        <img src="images/14.jpg" alt="Image 14">
+        <img src="images/15.jpg" alt="Image 15">
+        <img src="images/16.jpg" alt="Image 16">
+        <img src="images/17.jpg" alt="Image 17">
+        <img src="images/18.jpg" alt="Image 18">
+        <img src="images/13.jpg" alt="Image 13 clone">
+        <img src="images/14.jpg" alt="Image 14 clone">
+        <img src="images/15.jpg" alt="Image 15 clone">
+        <img src="images/16.jpg" alt="Image 16 clone">
+        <img src="images/17.jpg" alt="Image 17 clone">
+        <img src="images/18.jpg" alt="Image 18 clone">
+      </div>
     </div>
-    <div class="row">
-      <img src="images/19.jpg" alt="Image 19">
-      <img src="images/20.jpg" alt="Image 20">
-      <img src="images/21.jpg" alt="Image 21">
-      <img src="images/22.jpg" alt="Image 22">
-      <img src="images/23.jpg" alt="Image 23">
-      <img src="images/24.jpg" alt="Image 24">
+  <div class="row scrolling-row scroll-left" style="--scroll-speed:42s;">
+      <div class="scrolling-inner">
+        <img src="images/19.jpg" alt="Image 19">
+        <img src="images/20.jpg" alt="Image 20">
+        <img src="images/21.jpg" alt="Image 21">
+        <img src="images/22.jpg" alt="Image 22">
+        <img src="images/23.jpg" alt="Image 23">
+        <img src="images/24.jpg" alt="Image 24">
+        <img src="images/19.jpg" alt="Image 19 clone">
+        <img src="images/20.jpg" alt="Image 20 clone">
+        <img src="images/21.jpg" alt="Image 21 clone">
+        <img src="images/22.jpg" alt="Image 22 clone">
+        <img src="images/23.jpg" alt="Image 23 clone">
+        <img src="images/24.jpg" alt="Image 24 clone">
+      </div>
     </div>
   </div>
   <style>
+    .scrolling-row {
+      overflow: hidden;
+      position: relative;
+    }
+    .scrolling-inner {
+      display: flex;
+      gap: 5px;
+      width: max-content;
+      height: 100%;
+      animation-duration: var(--scroll-speed, 30s);
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-play-state: paused;
+    }
+    .scrolling-inner.loaded {
+      animation-play-state: running;
+    }
+    .scroll-right .scrolling-inner {
+      animation-name: scroll-right;
+    }
+    .scroll-left .scrolling-inner {
+      animation-name: scroll-left;
+    }
+    @keyframes scroll-right {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
     html, body {
       height: 100%;
       margin: 0;
@@ -77,5 +148,13 @@
       display: block;
     }
   </style>
+  <script>
+    // Wait for all images to load before starting animations
+    window.addEventListener('load', function() {
+      document.querySelectorAll('.scrolling-inner').forEach(function(element) {
+        element.classList.add('loaded');
+      });
+    });
+  </script>
 </body>
 </html>
