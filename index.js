@@ -4,6 +4,9 @@ const path = require("path");
 const app = express();
 const PORT = 3000;
 
+// Serve all static files (HTML, CSS, JS, etc.) first
+app.use(express.static(__dirname));
+
 // Serve images statically
 app.use("/images", express.static(path.join(__dirname, "images")));
 
