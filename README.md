@@ -71,7 +71,3 @@ Images are served via Cloudinary with advanced optimizations:
 - Firefox (latest)
 - Safari (latest)
 - Mobile browsers with CSS animation support
-
-## License
-
-MIT License
