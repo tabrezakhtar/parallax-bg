@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Background</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Background</title>
   <!-- <link rel="stylesheet" href="styles.css"> -->
 </head>
 <body>
   <div class="parallax-gallery">
-  <div class="row scrolling-row scroll-right" style="--scroll-speed: 30s;">
+    <div class="row scrolling-row scroll-right" style="--scroll-speed: 50s;">
       <div class="scrolling-inner">
         <img src="images/1.jpg" alt="Image 1">
         <img src="images/2.jpg" alt="Image 2">
@@ -24,7 +24,7 @@
         <img src="images/6.jpg" alt="Image 6 clone">
       </div>
     </div>
-  <div class="row scrolling-row scroll-left" style="--scroll-speed: 48s;">
+    <div class="row scrolling-row scroll-left" style="--scroll-speed: 70s;">
       <div class="scrolling-inner">
         <img src="images/7.jpg" alt="Image 7">
         <img src="images/8.jpg" alt="Image 8">
@@ -40,7 +40,7 @@
         <img src="images/12.jpg" alt="Image 12 clone">
       </div>
     </div>
-  <div class="row scrolling-row scroll-right" style="--scroll-speed: 25s;">
+    <div class="row scrolling-row scroll-right" style="--scroll-speed: 42s;">
       <div class="scrolling-inner">
         <img src="images/13.jpg" alt="Image 13">
         <img src="images/14.jpg" alt="Image 14">
@@ -56,7 +56,7 @@
         <img src="images/18.jpg" alt="Image 18 clone">
       </div>
     </div>
-  <div class="row scrolling-row scroll-left" style="--scroll-speed:42s;">
+    <div class="row scrolling-row scroll-left" style="--scroll-speed: 20s;">
       <div class="scrolling-inner">
         <img src="images/19.jpg" alt="Image 19">
         <img src="images/20.jpg" alt="Image 20">
@@ -74,6 +74,40 @@
     </div>
   </div>
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+    .parallax-gallery {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      gap: 5px;
+    }
+    .row {
+      flex: 1;
+      display: flex;
+      width: 100vw;
+      height: 25vh;
+      gap: 5px;
+    }
+    .row img {
+      flex: 1;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
     .scrolling-row {
       overflow: hidden;
       position: relative;
@@ -112,40 +146,6 @@
       100% {
         transform: translateX(-50%);
       }
-    }
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-    }
-    body {
-      width: 100vw;
-      height: 100vh;
-      box-sizing: border-box;
-    }
-    .parallax-gallery {
-      display: flex;
-      flex-direction: column;
-      width: 100vw;
-      height: 100vh;
-      gap: 5px;
-    }
-    .row {
-      flex: 1;
-      display: flex;
-      width: 100vw;
-      height: 25vh;
-      gap: 5px;
-    }
-    .row img {
-      flex: 1;
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      display: block;
     }
   </style>
   <script>
