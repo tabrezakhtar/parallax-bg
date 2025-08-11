@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tabrezakhtar/parallax-bg/issues"
   },
-  "homepage": "https://github.com/tabrezakhtar/parallax-bg#readme"
+  "homepage": "https://github.com/tabrezakhtar/parallax-bg#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
